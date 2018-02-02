@@ -6,12 +6,12 @@ import (
 	"math/rand"
 )
 
-// NewRandSource create a new random source
+// NewRandSource creates a new random source using UnixNano
 func NewRandSource() rand.Source {
 	return rand.NewSource(time.Now().UnixNano())
 }
 
-// Suffle slice/array in place
+// Suffle reorders in-place the values of an slice
 func Shuffle(slice interface{}, source rand.Source) {
     rv     := reflect.ValueOf(slice)
     swap   := reflect.Swapper(slice)
