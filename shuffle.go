@@ -11,7 +11,7 @@ func NewRandSource() rand.Source {
 	return rand.NewSource(time.Now().UnixNano())
 }
 
-// Suffle reorders in-place the values of an slice
+// Shuffle reorders in-place the values of an slice
 func Shuffle(slice interface{}, source rand.Source) {
 	rv := reflect.ValueOf(slice)
 	swap := reflect.Swapper(slice)
