@@ -1,9 +1,9 @@
 package shuffle
 
 import (
-	"time"
-	"reflect"
 	"math/rand"
+	"reflect"
+	"time"
 )
 
 // NewRandSource creates a new random source using UnixNano
@@ -13,12 +13,12 @@ func NewRandSource() rand.Source {
 
 // Suffle reorders in-place the values of an slice
 func Shuffle(slice interface{}, source rand.Source) {
-    rv     := reflect.ValueOf(slice)
-    swap   := reflect.Swapper(slice)
+	rv := reflect.ValueOf(slice)
+	swap := reflect.Swapper(slice)
 	random := rand.New(source)
-    length := rv.Len()
-    for i := length - 1; i > 0; i-- {
-            j := random.Intn(i + 1)
-            swap(i, j)
-    }
+	length := rv.Len()
+	for i := length - 1; i > 0; i-- {
+		j := random.Intn(i + 1)
+		swap(i, j)
+	}
 }
