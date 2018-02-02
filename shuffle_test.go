@@ -61,7 +61,7 @@ func TestShuffle(t *testing.T) {
 	for l := 0; l < 100; l++ {
 		initial, shuffled := BuildShuffledSlices(l)
 		if len(initial) != len(shuffled) {
-			t.Errorf("Shuffled changed slice lenghts %v %v", len(initial), len(shuffled))
+			t.Errorf("Shuffled changed slices lenght %v %v", len(initial), len(shuffled))
 			return
 		}
 
