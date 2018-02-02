@@ -6,10 +6,10 @@ import (
 	"math/rand"
 )
 
+// NewRandSource create a new random source
 func NewRandSource() rand.Source {
-	return rand.NewSource(time.Now().Unix())
+	return rand.NewSource(time.Now().UnixNano())
 }
-
 
 // Suffle slice/array in place
 func Shuffle(slice interface{}, source rand.Source) {
