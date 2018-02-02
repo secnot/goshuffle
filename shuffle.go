@@ -1,3 +1,4 @@
+// Package shuffle provides random shuffling for slices
 package shuffle
 
 import (
