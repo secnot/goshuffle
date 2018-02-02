@@ -3,6 +3,6 @@
 Small golang package for in-place slice shuffling inspired by the responses in 
 [this](https://stackoverflow.com/questions/12264789/shuffle-array-in-go) stackoverflow question.
 
-## Requiremens
+## Requirements
 
 Go >= 1.8
